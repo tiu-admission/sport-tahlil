@@ -11,10 +11,10 @@ if not OPENAI_API_KEY:
 openai.api_key = OPENAI_API_KEY
 
 # Redis configuration
-REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
-REDIS_PORT = int(os.getenv("REDIS_PORT", 6379))
-REDIS_DB = int(os.getenv("REDIS_DB", 0))
-REDIS_PASSWORD = os.getenv("REDIS_PASSWORD", None)
+REDIS_HOST = os.getenv("REDIS_HOST") or "localhost"
+REDIS_PORT = int(os.getenv("REDIS_PORT") or 6379)
+REDIS_DB = int(os.getenv("REDIS_DB") or 0)
+REDIS_PASSWORD = os.getenv("REDIS_PASSWORD") or None
 REDIS_PREFIX = "sporttahlil:"
 REDIS_EXPIRATION = 60 * 60 * 24 * 7  # 7 days
 
