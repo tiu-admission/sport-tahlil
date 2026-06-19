@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /*.css
+Allow: /*.js
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.gif
+Allow: /*.webp
+Disallow: /api/
+Disallow: /ws/
+
+Host: https://sporttahlil.com
+Sitemap: https://sporttahlil.com/sitemap.xml

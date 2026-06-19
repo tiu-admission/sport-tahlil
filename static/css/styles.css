@@ -1,0 +1,166 @@
+/* Corp Lex - Chat Widget Styles Only */
+/* All page styles are handled by the template CSS */
+
+/* ── Chat widget embedded in Answer section ── */
+.chat-widget-embedded .chat-container {
+    font-family: 'Inter', sans-serif;
+}
+
+.chat-widget-embedded .message-wrapper {
+    max-width: 85%;
+}
+
+.chat-widget-embedded .message-wrapper.user {
+    align-self: flex-end;
+}
+
+.chat-widget-embedded .message-wrapper.user .message {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+
+.chat-widget-embedded .message-wrapper.assistant .message {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #cbd5e1;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+
+.chat-widget-embedded .message-wrapper.assistant .message strong,
+.chat-widget-embedded .message-wrapper.assistant .message b {
+    color: #fff;
+}
+
+.chat-widget-embedded .message-wrapper.assistant .message ul,
+.chat-widget-embedded .message-wrapper.assistant .message ol {
+    padding-left: 20px;
+    margin: 8px 0;
+}
+
+.chat-widget-embedded .message-wrapper.assistant .message li {
+    margin-bottom: 4px;
+}
+
+.chat-widget-embedded .message-wrapper.assistant .message p {
+    margin-bottom: 8px;
+}
+
+.chat-widget-embedded .message-wrapper.assistant .message p:last-child {
+    margin-bottom: 0;
+}
+
+.chat-widget-embedded .message-wrapper.assistant .message a {
+    color: #818cf8;
+    text-decoration: underline;
+}
+
+.chat-widget-embedded .message-wrapper.error .message {
+    background: rgba(239,68,68,0.15);
+    border: 1px solid rgba(239,68,68,0.3);
+    color: #fca5a5;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 14px;
+}
+
+/* ── Typing indicator ── */
+.chat-widget-embedded .typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: 12px 16px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    width: fit-content;
+}
+
+.chat-widget-embedded .typing-indicator span {
+    width: 8px;
+    height: 8px;
+    background: #6366f1;
+    border-radius: 50%;
+    animation: typing-bounce 1.4s infinite ease-in-out;
+}
+
+.chat-widget-embedded .typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.chat-widget-embedded .typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing-bounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+}
+
+/* ── Scrollbar ── */
+.chat-widget-embedded #chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-widget-embedded #chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chat-widget-embedded #chat-messages::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.15);
+    border-radius: 3px;
+}
+
+/* ── Recording pulse animation ── */
+.recording-pulse {
+    width: 12px;
+    height: 12px;
+    background: #ef4444;
+    border-radius: 50%;
+    animation: pulse-recording 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-recording {
+    0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+/* ── Audio recorder visibility ── */
+.audio-recorder.active {
+    display: block !important;
+}
+
+/* ── Chat textarea focus ── */
+.chat-widget-embedded textarea:focus {
+    border-color: #6366f1 !important;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+/* ── Chat buttons hover ── */
+.chat-widget-embedded button[type="submit"]:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.chat-widget-embedded button[type="button"]:hover {
+    background: rgba(255,255,255,0.15) !important;
+    color: #fff !important;
+}
+
+/* ── Responsive chat widget ── */
+@media (max-width: 768px) {
+    .chat-widget-embedded .chat-container {
+        height: 450px !important;
+    }
+
+    .chat-widget-embedded textarea {
+        font-size: 16px !important; /* Prevent iOS zoom */
+    }
+}

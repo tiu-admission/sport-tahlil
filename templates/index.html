@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="description" content="SportTahlil - AI-Powered Athletic Performance Analysis" />
+    <meta name="keywords" content="sports analysis, athletic performance, VO2 max, training load, ACWR, HRV, sports nutrition, recovery, periodization, sports science, AI coach" />
+    <meta name="author" content="SportTahlil" />
+
+    <title>SportTahlil - AI-Powered Athletic Performance Analysis</title>
+
+    <link rel="icon" type="image/png" href="/static/assets/images/logo/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/assets/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="/static/assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="/static/assets/css/slick.css" />
+    <link rel="stylesheet" href="/static/assets/css/meanmenu.css" />
+    <link rel="stylesheet" href="/static/assets/css/nice-select.css" />
+    <link rel="stylesheet" href="/static/assets/css/animate.css" />
+    <link rel="stylesheet" href="/static/assets/css/style.css" />
+</head>
+
+<body>
+<!-- Preloader Start -->
+<div id="preloader">
+    <div id="preloader-status">
+        <div class="preloader-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+<!-- Preloader End -->
+
+<!-- Header Start -->
+<header class="header-area style-1">
+    <div class="te-header-menu-area te-sticky-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-6 d-flex align-items-center">
+                    <div class="te-logo">
+                        <a href="/" class="te-standard-logo">
+                            <span style="font-size:24px;font-weight:700;color:#fff;letter-spacing:1px;"><i class="fa-solid fa-chart-line" style="color:#3B82F6;margin-right:8px;"></i>SportTahlil</span>
+                        </a>
+                        <a href="/" class="te-sticky-logo">
+                            <span style="font-size:24px;font-weight:700;color:#fff;letter-spacing:1px;"><i class="fa-solid fa-chart-line" style="color:#3B82F6;margin-right:8px;"></i>SportTahlil</span>
+                        </a>
+                        <a href="/" class="te-retina-logo">
+                            <span style="font-size:24px;font-weight:700;color:#fff;letter-spacing:1px;"><i class="fa-solid fa-chart-line" style="color:#3B82F6;margin-right:8px;"></i>SportTahlil</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-9 col-md-6 col-6 d-flex align-items-center justify-content-end">
+                    <div class="te-menu d-inline-block">
+                        <nav id="main-menu" class="te-main-menu">
+                            <ul>
+                                <li class="active"><a href="/">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#how-it-works">How It Works</a></li>
+                                <li><a href="#faq">FAQ</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="te-header-btn">
+                        <a href="#" onclick="toggleChatModal(); return false;" class="te-cta-btn">Ask AI <i class="fa-solid fa-robot"></i></a>
+                        <div class="te-search-btn">
+                            <a href="#" class="te-icon te-offcanvas-toggle-btn">
+                                <i class="fa-regular fa-bars-sort"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="te-mobile-menu-bar d-xl-none text-end">
+                        <a href="#" class="te-mobile-menu-toggle-btn"><i class="fal fa-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header End -->
+
+<!-- Banner Area Start -->
+<div class="banner-area style-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="te-banner-content">
+                    <h1 class="gradient-title" style="background: linear-gradient(120deg, #93c5fd 0%, #3B82F6 50%, #2563EB 100%); background-clip: text; -webkit-background-clip: text;">AI-Powered Athletic <br/> Performance Analysis</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row gy-5 banner-content-row">
+            <div class="col-lg-8">
+                <div class="banner-image">
+                    <img class="tilt-animate" src="/static/images/hero.png" alt="SportTahlil Athletic Performance">
+                </div>
+            </div>
+            <div class="col-lg-4 align-self-center">
+                <div class="banner-info-card style-1">
+                    <div class="message-feature-card">
+                        <div class="single-msg">
+                            <div class="image">
+                                <img src="/static/assets/images/banner/user-1.jpg" alt="user">
+                            </div>
+                            <span class="content">Why has my VO2 max plateaued?</span>
+                        </div>
+                        <div class="single-msg">
+                            <div class="image">
+                                <img src="/static/assets/images/banner/user-2.jpg" alt="assistant">
+                            </div>
+                            <span class="content">I can analyze your training load, VO2 max, HRV, nutrition, and recovery.</span>
+                        </div>
+                        <div class="single-msg">
+                            <div class="image">
+                                <img src="/static/assets/images/banner/user-1.jpg" alt="user">
+                            </div>
+                            <span class="content">How should I taper for my race?</span>
+                        </div>
+                    </div>
+                    <div class="content-wrapper">
+                        <p>Get instant AI-powered analysis of your athletic performance. From training load and VO2 max to nutrition and recovery, we've got you covered.</p>
+                    </div>
+                    <div class="btn-wrapper">
+                        <a href="#" onclick="toggleChatModal(); return false;" class="te-theme-btn blue-btn">Start Chat <i class="fa fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="blur-shape"></div>
+        </div>
+    </div>
+</div>
+<!-- Banner Area End -->
+
+<!-- About Area Start -->
+<div id="about" class="about-feature-area">
+    <div class="circle-drop-shadow"></div>
+    <div class="container">
+        <div class="row gy-4 align-items-center">
+            <div class="col-lg-6 order-2 order-lg-1 wow animate__animated animate__slideInLeft animate__slow">
+                <div class="about-us-card">
+                    <div class="te-section-title">
+                        <div class="te-section-content">
+                            <div class="short-title-wrapper">
+                                <span class="short-title">About SportTahlil</span>
+                            </div>
+                            <h2 class="title">Your AI-powered athletic performance partner</h2>
+                            <p>SportTahlil leverages advanced AI to provide instant, individualized analysis of athletic performance. From developing athletes to elite competitors, get the performance insights you need, when you need them.</p>
+                        </div>
+                    </div>
+                    <div class="te-list-item-wrapper">
+                        <div class="te-list-item">
+                            <div class="icon">
+                                <img src="/static/assets/images/icon/list-icon/icon-1.png" alt="icon">
+                            </div>
+                            <span class="text">24/7 AVAILABILITY</span>
+                        </div>
+                        <div class="te-list-item">
+                            <div class="icon">
+                                <img src="/static/assets/images/icon/list-icon/icon-2.png" alt="icon">
+                            </div>
+                            <span class="text">EXPERT KNOWLEDGE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-5 offset-xl-1 order-1 order-lg-2 wow animate__animated animate__zoomIn animate__slow">
+                <div class="image-card">
+                    <img class="tilt-animate" src="/static/images/i.webp" alt="About SportTahlil">
+                </div>
+            </div>
+        </div>
+        <div class="row gy-4 align-items-center mt-30">
+            <div class="col-lg-6 col-xl-5 wow animate__animated animate__zoomIn animate__slow">
+                <div class="image-card">
+                    <img class="tilt-animate" src="/static/images/q.webp" alt="AI Features">
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-6 offset-xl-1 wow animate__animated animate__slideInRight animate__slower">
+                <div class="about-us-card">
+                    <div class="te-section-title">
+                        <div class="te-section-content">
+                            <div class="short-title-wrapper">
+                                <span class="short-title">AI Features</span>
+                            </div>
+                            <h2 class="title">Smart performance analysis at your fingertips</h2>
+                            <p>Upload training logs, lab tests, and wearable data for instant AI analysis. Ask questions via text or voice. Get structured guidance grounded in real sport science.</p>
+                        </div>
+                    </div>
+                    <div class="te-list-item-wrapper">
+                        <div class="te-list-item">
+                            <div class="icon">
+                                <img src="/static/assets/images/icon/list-icon/icon-1.png" alt="icon">
+                            </div>
+                            <span class="text">DOCUMENT ANALYSIS</span>
+                        </div>
+                        <div class="te-list-item">
+                            <div class="icon">
+                                <img src="/static/assets/images/icon/list-icon/icon-2.png" alt="icon">
+                            </div>
+                            <span class="text">VOICE QUERIES</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About Area End -->
+
+<!-- Services Area Start -->
+<div id="services" class="latest-service-area style-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 wow animate__animated animate__slideInDown animate__slow">
+                <div class="te-section-title justify-content-center text-center">
+                    <div class="te-section-content">
+                        <div class="short-title-wrapper">
+                            <span class="short-title">Our Expertise</span>
+                        </div>
+                        <h2 class="title">Performance analysis made <br/> simple with AI</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="latest-service-wrapper">
+                    <div class="latest-service-card wow animate__animated animate__fadeInUp animate__faster">
+                        <div class="circle-drop-shadow"></div>
+                        <div class="content-wrapper">
+                            <div class="icon">
+                                <i class="fa-solid fa-bolt" style="font-size:46px;color:#3B82F6;line-height:1;"></i>
+                            </div>
+                            <div class="title-wrapper">
+                                <h3 class="title"><a href="#" onclick="toggleChatModal(); return false;">Physical Performance</a></h3>
+                            </div>
+                            <div class="content">
+                                <p>VO2 max, speed, power-to-weight, and <br/> heart-rate zone analysis</p>
+                            </div>
+                        </div>
+                        <a href="#" onclick="toggleChatModal(); return false;" class="btn-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="67" height="16" viewBox="0 0 67 16" fill="none">
+                                <path d="M66.7071 8.70711C67.0976 8.31658 67.0976 7.68342 66.7071 7.29289L60.3431 0.928932C59.9526 0.538408 59.3195 0.538408 58.9289 0.928932C58.5384 1.31946 58.5384 1.95262 58.9289 2.34315L64.5858 8L58.9289 13.6569C58.5384 14.0474 58.5384 14.6805 58.9289 15.0711C59.3195 15.4616 59.9526 15.4616 60.3431 15.0711L66.7071 8.70711ZM0 9H66V7H0L0 9Z" fill="#3B82F6"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="latest-service-card wow animate__animated animate__fadeInUp animate__fast">
+                        <div class="circle-drop-shadow"></div>
+                        <div class="content-wrapper">
+                            <div class="icon">
+                                <i class="fa-solid fa-arrow-trend-up" style="font-size:46px;color:#3B82F6;line-height:1;"></i>
+                            </div>
+                            <div class="title-wrapper">
+                                <h3 class="title"><a href="#" onclick="toggleChatModal(); return false;">Training Load & Periodization</a></h3>
+                            </div>
+                            <div class="content">
+                                <p>ACWR, weekly load, taper & peak <br/> planning, and overtraining detection</p>
+                            </div>
+                        </div>
+                        <a href="#" onclick="toggleChatModal(); return false;" class="btn-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="67" height="16" viewBox="0 0 67 16" fill="none">
+                                <path d="M66.7071 8.70711C67.0976 8.31658 67.0976 7.68342 66.7071 7.29289L60.3431 0.928932C59.9526 0.538408 59.3195 0.538408 58.9289 0.928932C58.5384 1.31946 58.5384 1.95262 58.9289 2.34315L64.5858 8L58.9289 13.6569C58.5384 14.0474 58.5384 14.6805 58.9289 15.0711C59.3195 15.4616 59.9526 15.4616 60.3431 15.0711L66.7071 8.70711ZM0 9H66V7H0L0 9Z" fill="#3B82F6"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="latest-service-card wow animate__animated animate__fadeInUp animate__slow">
+                        <div class="circle-drop-shadow"></div>
+                        <div class="content-wrapper">
+                            <div class="icon">
+                                <i class="fa-solid fa-apple-whole" style="font-size:46px;color:#3B82F6;line-height:1;"></i>
+                            </div>
+                            <div class="title-wrapper">
+                                <h3 class="title"><a href="#" onclick="toggleChatModal(); return false;">Nutrition & Recovery</a></h3>
+                            </div>
+                            <div class="content">
+                                <p>Fueling, hydration, HRV, sleep, and <br/> return-to-play guidance</p>
+                            </div>
+                        </div>
+                        <a href="#" onclick="toggleChatModal(); return false;" class="btn-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="67" height="16" viewBox="0 0 67 16" fill="none">
+                                <path d="M66.7071 8.70711C67.0976 8.31658 67.0976 7.68342 66.7071 7.29289L60.3431 0.928932C59.9526 0.538408 59.3195 0.538408 58.9289 0.928932C58.5384 1.31946 58.5384 1.95262 58.9289 2.34315L64.5858 8L58.9289 13.6569C58.5384 14.0474 58.5384 14.6805 58.9289 15.0711C59.3195 15.4616 59.9526 15.4616 60.3431 15.0711L66.7071 8.70711ZM0 9H66V7H0L0 9Z" fill="#3B82F6"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="latest-service-card wow animate__animated animate__fadeInUp animate__slower">
+                        <div class="circle-drop-shadow"></div>
+                        <div class="content-wrapper">
+                            <div class="icon">
+                                <i class="fa-solid fa-brain" style="font-size:46px;color:#3B82F6;line-height:1;"></i>
+                            </div>
+                            <div class="title-wrapper">
+                                <h3 class="title"><a href="#" onclick="toggleChatModal(); return false;">Tactical & Mental</a></h3>
+                            </div>
+                            <div class="content">
+                                <p>Opponent analysis, competition review, <br/> and sports psychology</p>
+                            </div>
+                        </div>
+                        <a href="#" onclick="toggleChatModal(); return false;" class="btn-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="67" height="16" viewBox="0 0 67 16" fill="none">
+                                <path d="M66.7071 8.70711C67.0976 8.31658 67.0976 7.68342 66.7071 7.29289L60.3431 0.928932C59.9526 0.538408 59.3195 0.538408 58.9289 0.928932C58.5384 1.31946 58.5384 1.95262 58.9289 2.34315L64.5858 8L58.9289 13.6569C58.5384 14.0474 58.5384 14.6805 58.9289 15.0711C59.3195 15.4616 59.9526 15.4616 60.3431 15.0711L66.7071 8.70711ZM0 9H66V7H0L0 9Z" fill="#3B82F6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Services Area End -->
+
+<!-- Features Area Start -->
+<div class="feature-area style-1">
+    <div class="circle-drop-shadow"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 wow animate__animated animate__slideInDown animate__slow">
+                <div class="te-section-title justify-content-center text-center">
+                    <div class="te-section-content">
+                        <div class="short-title-wrapper">
+                            <span class="short-title">Performance Domains</span>
+                        </div>
+                        <h2 class="title">Comprehensive performance <br/> science coverage</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row gy-4">
+            <div class="col-md-6 col-lg-4 wow animate__animated animate__fadeInUp animate__faster">
+                <div class="te-info-card style-2">
+                    <div class="te-info-card-inner">
+                        <div class="image">
+                            <img src="/static/assets/images/service/service-1.png" alt="Physical Performance"/>
+                        </div>
+                        <div class="te-content-wrapper">
+                            <div class="te-title-wrapper">
+                                <h3 class="title"><a href="#" onclick="toggleChatModal(); return false;">Physical Performance Metrics</a></h3>
+                            </div>
+                            <div class="content">
+                                <p class="desc">Speed, VO2 max, power-to-weight ratio, heart-rate zones, endurance, and agility</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-8 feature-card wow animate__animated animate__fadeInUp animate__fast">
+                <div class="te-info-card style-2">
+                    <div class="te-info-card-inner">
+                        <div class="image">
+                            <img src="/static/assets/images/service/service-2.png" alt="Training Load & Periodization"/>
+                        </div>
+                        <div class="te-content-wrapper">
+                            <div class="te-title-wrapper">
+                                <h3 class="title"><a href="#" onclick="toggleChatModal(); return false;">Training Load & Periodization</a></h3>
+                            </div>
+                            <div class="content">
+                                <p class="desc">ACWR, load monitoring, session intensity, taper & peak planning, and overtraining detection</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow animate__animated animate__fadeInUp animate__slow">
+                <div class="te-info-card style-2">
+                    <div class="te-info-card-inner">
+                        <div class="image">
+                            <img src="/static/assets/images/service/service-3.png" alt="Nutrition & Body Composition"/>
+                        </div>
+                        <div class="te-content-wrapper">
+                            <div class="te-title-wrapper">
+                                <h3 class="title"><a href="#" onclick="toggleChatModal(); return false;">Nutrition & Body Composition</a></h3>
+                            </div>
+                            <div class="content">
+                                <p class="desc">Fueling, macro targets, hydration, weight-class cuts, and supplement protocols</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow animate__animated animate__fadeInUp animate__slow">
+                <div class="te-info-card style-2">
+                    <div class="te-info-card-inner">
+                        <div class="image">
+                            <img src="/static/assets/images/service/service-4.png" alt="Injury Prevention & Recovery"/>
+                        </div>
+                        <div class="te-content-wrapper">
+                            <div class="te-title-wrapper">
+                                <h3 class="title"><a href="#" onclick="toggleChatModal(); return false;">Injury Prevention & Recovery</a></h3>
+                            </div>
+                            <div class="content">
+                                <p class="desc">HRV monitoring, return-to-play timelines, mobility, sleep quality, and injury-risk indicators</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow animate__animated animate__fadeInUp animate__slower">
+                <div class="te-info-card style-2">
+                    <div class="te-info-card-inner">
+                        <div class="image">
+                            <img src="/static/assets/images/service/service-5.png" alt="Tactical & Mental Performance"/>
+                        </div>
+                        <div class="te-content-wrapper">
+                            <div class="te-title-wrapper">
+                                <h3 class="title"><a href="#" onclick="toggleChatModal(); return false;">Tactical & Mental Performance</a></h3>
+                            </div>
+                            <div class="content">
+                                <p class="desc">Opponent analysis, competition KPIs, visualization, pre-performance routines, and anxiety management</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Features Area End -->
+
+<!-- How It Works Area Start -->
+<div id="how-it-works" class="work-prgress-area style-1">
+    <div class="circle-drop-shadow"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 wow animate__animated animate__slideInDown animate__slow">
+                <div class="te-section-title justify-content-center text-center">
+                    <div class="te-section-content">
+                        <div>
+                            <span class="short-title">How It Works</span>
+                        </div>
+                        <h2 class="title">Get performance answers <br/> in 3 simple steps</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row gy-5">
+            <div class="col-lg-4 col-md-6 te-process-two-step-wrapper wow animate__animated animate__fadeInTopLeft animate__slow">
+                <div class="te-process-step style-2">
+                    <div class="te-content-wrapper">
+                        <div class="te-title-wrapper">
+                            <div class="icon-wrapper">
+                                <div class="icon">
+                                    <i class="fa-solid fa-comment-dots" style="font-size:40px;color:#3B82F6;line-height:1;"></i>
+                                </div>
+                            </div>
+                            <h3 class="title">Ask</h3>
+                            <div class="shape-image">
+                                <img class="shape-1" src="/static/assets/images/icon/work-progress/shape.png" alt="shape">
+                                <img class="shape-2" src="/static/assets/images/icon/work-progress/shape-two.png" alt="shape">
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p class="desc">Type your performance question, use voice input, or upload a training log or test report for analysis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 te-process-two-step-wrapper wow animate__animated animate__fadeInUp animate__slow">
+                <div class="te-process-step style-2">
+                    <div class="te-content-wrapper">
+                        <div class="te-title-wrapper">
+                            <div class="icon-wrapper">
+                                <div class="icon">
+                                    <i class="fa-solid fa-magnifying-glass-chart" style="font-size:40px;color:#3B82F6;line-height:1;"></i>
+                                </div>
+                            </div>
+                            <h3 class="title">Analyze</h3>
+                            <div class="shape-image">
+                                <img class="shape-1" src="/static/assets/images/icon/work-progress/shape.png" alt="shape">
+                                <img class="shape-2" src="/static/assets/images/icon/work-progress/shape-two.png" alt="shape">
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p class="desc">Our AI reasons across eight performance domains using current sport science and proven frameworks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 te-process-two-step-wrapper wow animate__animated animate__fadeInTopRight animate__slow">
+                <div class="te-process-step style-2">
+                    <div class="te-content-wrapper">
+                        <div class="te-title-wrapper">
+                            <div class="icon-wrapper">
+                                <div class="icon">
+                                    <i class="fa-solid fa-clipboard-check" style="font-size:40px;color:#3B82F6;line-height:1;"></i>
+                                </div>
+                            </div>
+                            <h3 class="title">Deliver</h3>
+                            <div class="shape-image">
+                                <img class="shape-1" src="/static/assets/images/icon/work-progress/shape.png" alt="shape">
+                                <img class="shape-2" src="/static/assets/images/icon/work-progress/shape-two.png" alt="shape">
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p class="desc">Receive a structured analysis with specific numbers, reasoning, and actionable conclusions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- How It Works Area End -->
+
+<!-- Testimonial Area Start -->
+<div class="testimonial-slider-area style-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 wow animate__animated animate__slideInDown animate__slow">
+                <div class="te-section-title left-align-title">
+                    <div class="te-section-content">
+                        <div>
+                            <span class="short-title only-divider">Testimonials</span>
+                        </div>
+                        <h2 class="title">What our clients <br/> are saying</h2>
+                    </div>
+                    <div class="te-section-desc">
+                        <div class="te-slider-btn-wrapper">
+                            <a href="#" class="te-slider-nav te-slider-prev" id="testimonial_slider_prev">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </a>
+                            <a href="#" class="te-slider-nav te-slider-next" id="testimonial_slider_next">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="te-testimonial-slider-wrapper" id="testimonial_one">
+                    <div class="slick-single-item">
+                        <div class="te-testimonial-card">
+                            <div class="te-content-wrapper">
+                                <div class="quote-icon">
+                                    <div class="icon"><i class="fa-thin fa-quote-right"></i></div>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p>SportTahlil helped me understand why my VO2 max had plateaued. The analysis pinpointed my low Zone 2 volume and gave me a clear weekly plan.</p>
+                                </div>
+                                <div class="te-user-meta">
+                                    <div class="te-user-info">
+                                        <div class="image"><img src="/static/images/t-1.jpg" alt="Madina Yusupova" /></div>
+                                        <div class="info">
+                                            <h2 class="name">Madina Yusupova</h2>
+                                            <span class="designation">Distance Runner</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slick-single-item">
+                        <div class="te-testimonial-card">
+                            <div class="te-content-wrapper">
+                                <div class="quote-icon">
+                                    <div class="icon"><i class="fa-thin fa-quote-right"></i></div>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p>I uploaded my training log and the AI instantly flagged that my acute:chronic workload ratio had spiked to 1.6. It very likely saved me from an injury.</p>
+                                </div>
+                                <div class="te-user-meta">
+                                    <div class="te-user-info">
+                                        <div class="image"><img src="/static/images/tm-marcus.jpg" alt="Marcus Bennett" /></div>
+                                        <div class="info">
+                                            <h2 class="name">Marcus Bennett</h2>
+                                            <span class="designation">Triathlon Coach</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slick-single-item">
+                        <div class="te-testimonial-card">
+                            <div class="te-content-wrapper">
+                                <div class="quote-icon">
+                                    <div class="icon"><i class="fa-thin fa-quote-right"></i></div>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p>As a first-time marathoner navigating my taper, SportTahlil was invaluable. The step-by-step 16-week peaking plan was exactly what I needed.</p>
+                                </div>
+                                <div class="te-user-meta">
+                                    <div class="te-user-info">
+                                        <div class="image" style="width:50px;height:50px;background:linear-gradient(135deg,#3B82F6,#2563EB);border-radius:50%;display:flex;align-items:center;justify-content:center;"><i class="fa-solid fa-user" style="color:#fff;font-size:20px;"></i></div>
+                                        <div class="info">
+                                            <h2 class="name">Elena Petrova</h2>
+                                            <span class="designation">Amateur Marathoner</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slick-single-item">
+                        <div class="te-testimonial-card">
+                            <div class="te-content-wrapper">
+                                <div class="quote-icon">
+                                    <div class="icon"><i class="fa-thin fa-quote-right"></i></div>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p>The document analysis feature is a game-changer. I uploaded my lab test report at 2 AM and got detailed feedback on my lactate threshold within seconds.</p>
+                                </div>
+                                <div class="te-user-meta">
+                                    <div class="te-user-info">
+                                        <div class="image" style="width:50px;height:50px;background:linear-gradient(135deg,#ef4444,#dc2626);border-radius:50%;display:flex;align-items:center;justify-content:center;"><i class="fa-solid fa-user" style="color:#fff;font-size:20px;"></i></div>
+                                        <div class="info">
+                                            <h2 class="name">Diego Fernandez</h2>
+                                            <span class="designation">Cycling Coach</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slick-single-item">
+                        <div class="te-testimonial-card">
+                            <div class="te-content-wrapper">
+                                <div class="quote-icon">
+                                    <div class="icon"><i class="fa-thin fa-quote-right"></i></div>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p>SportTahlil helped me understand how to adjust my training at 32 — slower recovery and smarter HRV monitoring. The references were accurate and well-structured.</p>
+                                </div>
+                                <div class="te-user-meta">
+                                    <div class="te-user-info">
+                                        <div class="image"><img src="/static/images/t-3.jpg" alt="Andre Williams" /></div>
+                                        <div class="info">
+                                            <h2 class="name">Andre Williams</h2>
+                                            <span class="designation">Masters Athlete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slick-single-item">
+                        <div class="te-testimonial-card">
+                            <div class="te-content-wrapper">
+                                <div class="quote-icon">
+                                    <div class="icon"><i class="fa-thin fa-quote-right"></i></div>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p>Outstanding tool for pre-competition nutrition. The AI broke down exactly what to eat 3 hours before my match and why. Highly recommend.</p>
+                                </div>
+                                <div class="te-user-meta">
+                                    <div class="te-user-info">
+                                        <div class="image" style="width:50px;height:50px;background:linear-gradient(135deg,#06b6d4,#0891b2);border-radius:50%;display:flex;align-items:center;justify-content:center;"><i class="fa-solid fa-user" style="color:#fff;font-size:20px;"></i></div>
+                                        <div class="info">
+                                            <h2 class="name">Sophie Laurent</h2>
+                                            <span class="designation">Combat Athlete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial Area End -->
+
+<!-- FAQ Area Start -->
+<div id="faq" class="faq-area style-1">
+    <div class="circle-drop-shadow"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="te-section-title left-align-title">
+                    <div class="te-section-content">
+                        <div>
+                            <span class="short-title only-divider">FAQ</span>
+                        </div>
+                        <h2 class="title">Frequently asked <br/> questions</h2>
+                    </div>
+                    <div class="te-section-desc">
+                        <p>Find answers to common questions about SportTahlil and how our AI-powered performance assistant can help your training.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row gy-4">
+            <div class="col-xl-7 col-lg-6 order-2 order-lg-1 align-self-center wow animate__animated animate__bounceIn animate__slower">
+                <div class="accordion-wrapper">
+                    <div class="circle-drop-shadow"></div>
+                    <div class="te-accordion-box-wrapper" id="faq_list">
+                        <div class="te-accordion-list-item">
+                            <div id="headingOne">
+                                <div class="te-accordion-head" role="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <h3 class="te-accordion-title"><span>01</span>What types of performance questions can SportTahlil answer?</h3>
+                                </div>
+                            </div>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faq_list">
+                                <div class="te-accordion-body">
+                                    <p>SportTahlil covers eight performance domains: physical metrics (VO2 max, speed, power), training load & periodization (ACWR, tapering), nutrition & body composition, mental & cognitive performance, injury prevention & recovery (HRV, return-to-play), competition & tactical analysis, wearable & sensor data, and long-term athlete development.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="te-accordion-list-item">
+                            <div id="headingTwo">
+                                <div class="te-accordion-head collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <h3 class="te-accordion-title"><span>02</span>Can I upload training data or test reports for analysis?</h3>
+                                </div>
+                            </div>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faq_list">
+                                <div class="te-accordion-body">
+                                    <p>Yes! You can upload PDF, DOCX, TXT files, and even images of your training logs, lab/fitness test reports, or wearable data exports. Our AI will extract the data, analyze it, and provide detailed feedback on trends, training load, and injury-risk indicators.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="te-accordion-list-item">
+                            <div id="headingThree">
+                                <div class="te-accordion-head collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <h3 class="te-accordion-title"><span>03</span>Does SportTahlil replace a coach or doctor?</h3>
+                                </div>
+                            </div>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faq_list">
+                                <div class="te-accordion-body">
+                                    <p>No. SportTahlil provides general performance guidance for educational purposes. It does not constitute medical advice. For injuries, medical symptoms, or significant changes, we always recommend consulting a qualified sports physician, physiotherapist, or registered dietitian.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="te-accordion-list-item">
+                            <div id="headingFour">
+                                <div class="te-accordion-head collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <h3 class="te-accordion-title"><span>04</span>Is my data and conversation history secure?</h3>
+                                </div>
+                            </div>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faq_list">
+                                <div class="te-accordion-body">
+                                    <p>Yes. Your conversations are encrypted and stored securely. Uploaded documents are automatically deleted after processing. We do not share your data with third parties. See our Privacy Policy for full details.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-6 order-1 order-lg-2 align-self-center wow animate__animated animate__slideInUp animate__slower">
+                <div class="image-card">
+                    <img class="tilt-animate" src="/static/images/faq.jpg" alt="FAQ" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQ Area End -->
+
+<!-- Contact / Newsletter Section Start -->
+<div id="contact" class="subscribe-area style-1 wow animate__animated animate__flipInX animate__slow">
+    <div class="circle-drop-shadow"></div>
+    <div class="circle-drop-shadow two"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-8 offset-xl-3 offset-lg-2">
+                <div class="te-section-title justify-content-center text-center">
+                    <div class="te-section-content">
+                        <div class="short-title-wrapper">
+                            <span class="short-title">Get In Touch</span>
+                        </div>
+                        <h2 class="title">Ready to get performance <br/> answers?</h2>
+                        <p>Start a conversation with our AI assistant now, or subscribe to get updates on new features and sport-science insights.</p>
+                    </div>
+                </div>
+                <div class="te-subscribe-form-widget">
+                    <form>
+                        <div class="mc4wp-form-fields">
+                            <div class="single-field">
+                                <input type="email" placeholder="Enter Your Email" />
+                            </div>
+                            <button class="submit-btn" type="submit">Subscribe Now <i class="fa fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact / Newsletter Section End -->
+
+<!-- Floating Chat Button -->
+<div id="chat-fab" onclick="toggleChatModal()" style="position: fixed; bottom: 30px; right: 30px; z-index: 99999; cursor: pointer;">
+    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #3B82F6, #2563eb); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(59, 130, 246,0.5); transition: transform 0.3s ease;">
+        <i class="fa-solid fa-robot" style="color: #fff; font-size: 24px;"></i>
+    </div>
+    <div style="position: absolute; top: -2px; right: -2px; width: 14px; height: 14px; background: #22c55e; border-radius: 50%; border: 2px solid #0a0a0f;"></div>
+</div>
+
+<!-- Chat Modal -->
+<div id="chat-modal" style="display: none; position: fixed; z-index: 999999;">
+    <!-- Backdrop -->
+    <div id="chat-backdrop" onclick="toggleChatModal()" style="position: fixed; inset: 0; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px);"></div>
+    <!-- Chat Container -->
+    <div id="chat-modal-box" style="position: fixed; bottom: 100px; right: 30px; width: 420px; height: 620px; background: #1e1f20; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 20px 60px rgba(0,0,0,0.5); transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.08);">
+
+        <!-- Header -->
+        <div style="padding: 14px 20px; background: #1e1f20; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="width: 38px; height: 38px; background: linear-gradient(135deg, #3B82F6, #2563eb); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <i class="fa-solid fa-chart-line" style="color: #fff; font-size: 16px;"></i>
+                </div>
+                <div>
+                    <div style="color: #e3e3e3; font-size: 15px; font-weight: 700;">SportTahlil AI</div>
+                    <div style="color: #3B82F6; font-size: 11px; font-weight: 500;"><i class="fa-solid fa-circle" style="font-size: 6px; margin-right: 3px;"></i>Online</div>
+                </div>
+            </div>
+            <button onclick="toggleChatModal()" style="background: rgba(255,255,255,0.08); border: none; color: #9aa0a6; font-size: 16px; cursor: pointer; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <!-- Messages Area -->
+        <div class="chat-messages" id="chat-messages" style="flex: 1; overflow-y: auto; padding: 20px 20px 10px; display: flex; flex-direction: column; gap: 16px; background: #131314;">
+
+            <!-- Welcome Screen -->
+            <div id="chat-welcome" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px 10px 0;">
+                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #3B82F6, #2563eb); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+                    <i class="fa-solid fa-chart-line" style="color: #fff; font-size: 24px;"></i>
+                </div>
+                <h3 style="font-size: 24px; font-weight: 700; color: #e3e3e3; margin-bottom: 10px; text-align: center;">How can we assist you today?</h3>
+                <p style="font-size: 15px; color: #9aa0a6; text-align: center; line-height: 1.6; max-width: 420px; margin-bottom: 28px;">Get individualized guidance on training, nutrition, recovery, HRV, periodization, tactics, and more. Choose a topic or ask your own question.</p>
+                <div id="suggestion-cards" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; max-width: 500px;"></div>
+                <p style="text-align: center; font-size: 12px; color: #5f6368; margin: 10px 0 0; padding: 0;">SportTahlil AI can make mistakes. Check important info.</p>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area" id="chat-input-area" style="padding: 12px 16px; background: #1e1f20; border-top: 1px solid rgba(255,255,255,0.08);">
+            <form class="input-form" id="chat-form" style="display: flex; align-items: center; gap: 10px; background: #2b2d30; border-radius: 50px; padding: 6px 6px 6px 16px; border: 1px solid rgba(255,255,255,0.08);">
+                <button type="button" id="doc-upload-btn" style="background: none; border: none; color: #9aa0a6; font-size: 18px; cursor: pointer; padding: 4px; flex-shrink: 0;">
+                    <i class="fa-solid fa-paperclip"></i>
+                </button>
+                <input type="file" id="doc-file-input" accept=".pdf,.docx,.doc,.txt,.jpg,.jpeg,.png,.webp" style="display:none">
+                <textarea class="message-input" id="message-input" placeholder="Ask about your performance..." rows="1" required style="flex: 1; padding: 8px 0; background: transparent; border: none; color: #e3e3e3; font-size: 16px; resize: none; outline: none; font-family: Inter, sans-serif; line-height: 1.4; max-height: 80px;"></textarea>
+                <button type="button" id="voice-toggle" style="background: none; border: none; color: #9aa0a6; font-size: 18px; cursor: pointer; padding: 4px; flex-shrink: 0;">
+                    <i class="fa-solid fa-microphone"></i>
+                </button>
+                <button type="submit" style="width: 40px; height: 40px; background: linear-gradient(135deg, #3B82F6, #2563eb); border: none; border-radius: 50%; color: #fff; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+            <!-- Audio Recorder -->
+            <div class="audio-recorder" id="audio-recorder" style="display: none;">
+                <div style="display: flex; align-items: center; gap: 10px; background: rgba(30,30,40,0.95); border-radius: 50px; padding: 8px 8px 8px 16px; border: 1px solid rgba(255,255,255,0.1);">
+                    <button type="button" id="doc-upload-btn-audio" style="background: none; border: none; color: #999; font-size: 18px; cursor: pointer; padding: 4px; flex-shrink: 0;">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div style="flex: 1; display: flex; align-items: center; gap: 10px; overflow: hidden;">
+                        <div class="recording-pulse" id="recording-pulse"></div>
+                        <div id="audio-waveform" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 2px; height: 32px;"></div>
+                        <span class="recording-timer" id="recording-timer" style="color: #fff; font-size: 13px; font-weight: 600; flex-shrink: 0;">00:00</span>
+                    </div>
+                    <button type="button" id="cancel-btn" title="Cancel" style="width: 36px; height: 36px; background: rgba(255,255,255,0.1); border: none; border-radius: 50%; color: #fff; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <button type="button" id="send-audio-btn" title="Send Audio" disabled style="width: 36px; height: 36px; background: #fff; border: none; border-radius: 50%; color: #1a1a2e; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+                </div>
+                <span id="recording-text" style="display:none;">Recording</span>
+                <button id="record-btn" style="display:none;"></button>
+                <button id="stop-btn" style="display:none;"></button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer Start -->
+<footer class="footer style-1">
+    <div class="te-footer-sec">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-xl-3 col-lg-6 col-md-6 te-footer-widget-wrapper">
+                    <div class="te-footer-widget">
+                        <div class="te-footer-widget-info">
+                            <div class="te-footer-logo">
+                                <a href="/"><span style="font-size:24px;font-weight:700;color:#fff;letter-spacing:1px;"><i class="fa-solid fa-chart-line" style="color:#3B82F6;margin-right:8px;"></i>SportTahlil</span></a>
+                            </div>
+                            <p>AI-powered athletic performance analysis for athletes and coaches of all levels. Get instant answers to your training questions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 te-footer-widget-wrapper">
+                    <div class="te-footer-widget te_widget_nav_menu">
+                        <h3 class="te-footer-widget-title">Performance Domains</h3>
+                        <ul class="menu">
+                            <li><a href="#" onclick="toggleChatModal(); return false;">Physical Performance</a></li>
+                            <li><a href="#" onclick="toggleChatModal(); return false;">Training Load & Periodization</a></li>
+                            <li><a href="#" onclick="toggleChatModal(); return false;">Nutrition & Recovery</a></li>
+                            <li><a href="#" onclick="toggleChatModal(); return false;">Tactical & Mental</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 te-footer-widget-wrapper">
+                    <div class="te-footer-widget">
+                        <h3 class="te-footer-widget-title">Contact</h3>
+                        <div class="te-footer-widget-contact">
+                            <div class="footer-contact">
+                                <ul>
+                                    <li>
+                                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                                        <div class="contact-text"><a href="mailto:info@sporttahlil.com"><span>info@sporttahlil.com</span></a></div>
+                                    </li>
+                                    <li>
+                                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                        <div class="contact-text"><span>United States</span></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 te-footer-widget-wrapper">
+                    <div class="te-footer-widget">
+                        <div class="te-footer-widget-newsletter">
+                            <h3 class="te-footer-widget-title">Stay Updated</h3>
+                            <div class="te-subscribe-form-widget">
+                                <form>
+                                    <div class="mc4wp-form-fields">
+                                        <div class="single-field">
+                                            <input type="email" placeholder="Email here">
+                                        </div>
+                                        <button class="submit-btn" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="te-social-profile">
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="te-footer-bottom-wrapper">
+                        <div class="te-copyright-text">
+                            <p>&copy; <a href="/">SportTahlil</a> 2026 | All Rights Reserved</p>
+                        </div>
+                        <div class="te-footer-bottom-menu">
+                            <ul>
+                                <li><a href="/terms">Terms & Conditions</a></li>
+                                <li><a href="/privacy">Privacy Policy</a></li>
+                                <li><a href="#" onclick="toggleChatModal(); return false;">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->
+
+<!-- Mobile Nav Sidebar -->
+<div class="te-menu-sidebar-area">
+    <div class="te-menu-sidebar-wrapper">
+        <div class="te-menu-sidebar-close">
+            <button class="te-menu-sidebar-close-btn" id="menu_sidebar_close_btn">
+                <i class="fal fa-times"></i>
+            </button>
+        </div>
+        <div class="te-menu-sidebar-content">
+            <div class="te-menu-sidebar-logo">
+                <a href="/"><span style="font-size:24px;font-weight:700;color:#fff;letter-spacing:1px;"><i class="fa-solid fa-chart-line" style="color:#3B82F6;margin-right:8px;"></i>SportTahlil</span></a>
+            </div>
+            <div class="te-mobile-nav-menu"></div>
+            <div class="te-menu-sidebar-content">
+                <div class="te-menu-sidebar-single-widget">
+                    <div class="about-info text-white">
+                        <p>AI-powered athletic performance analysis. Get instant answers to your training questions 24/7.</p>
+                    </div>
+                </div>
+                <div class="te-menu-sidebar-single-widget">
+                    <h5 class="te-menu-sidebar-title">Contact Info</h5>
+                    <div class="te-header-contact-info">
+                        <span><a href="mailto:info@sporttahlil.com"><i class="fa-solid fa-envelope"></i>info@sporttahlil.com</a></span>
+                    </div>
+                    <div class="te-social-profile">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="te-body-overlay"></div>
+
+<!-- Search Form -->
+<div class="te-search-form-wrapper">
+    <div class="te-search-form-inner">
+        <div class="te-search-content-filed">
+            <form method="get" class="te-search-form" action="#">
+                <input type="hidden" name="post_type" value="post" />
+                <div class="te-search-form-input">
+                    <div class="te-search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <input type="search" name="s" placeholder="Search"/>
+                    <button class="te-theme-btn" type="submit" title="Search" aria-label="Search">Search</button>
+                </div>
+            </form>
+            <span class="te-search-close"><i class="fa-light fa-xmark"></i></span>
+        </div>
+    </div>
+</div>
+
+<!-- Back to Top -->
+<div class="progress-wrap" style="left:30px;right:auto;">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+    </svg>
+</div>
+
+<!-- Scripts -->
+<script src="/static/assets/js/jquery.min.js"></script>
+<script src="/static/assets/js/bootstrap.min.js"></script>
+<script src="/static/assets/js/jquery.nice-select.min.js"></script>
+<script src="/static/assets/js/slick.min.js"></script>
+<script src="/static/assets/js/jquery.counterup.min.js"></script>
+<script src="/static/assets/js/waypoints.js"></script>
+<script src="/static/assets/js/jquery.meanmenu.min.js"></script>
+<script src="/static/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="/static/assets/js/inview.min.js"></script>
+<script src="/static/assets/js/wow.js"></script>
+<script src="/static/assets/js/tilt.jquery.js"></script>
+<script src="/static/assets/js/isotope.min.js"></script>
+<script src="/static/assets/js/scrolltotop.min.js"></script>
+<script src="/static/assets/js/plugins.js"></script>
+<script src="/static/assets/js/custom.js"></script>
+
+<!-- Chat Modal JS -->
+<script>
+function toggleChatModal() {
+    var modal = document.getElementById('chat-modal');
+    var fab = document.getElementById('chat-fab');
+    if (modal.style.display === 'none' || !modal.style.display) {
+        modal.style.display = 'block';
+        fab.style.display = 'none';
+        document.getElementById('message-input').focus();
+        var welcome = document.getElementById('chat-welcome');
+        if (welcome && welcome.style.display !== 'none') {
+            setChatWelcomeMode(true);
+            renderSuggestions();
+        }
+    } else {
+        modal.style.display = 'none';
+        fab.style.display = 'block';
+    }
+}
+
+function setChatWelcomeMode(isWelcome) {
+    var inputArea = document.getElementById('chat-input-area');
+    var messages = document.getElementById('chat-messages');
+    var welcome = document.getElementById('chat-welcome');
+    if (isWelcome) {
+        if (inputArea) inputArea.style.display = 'none';
+        if (messages) messages.style.justifyContent = 'center';
+        if (welcome && inputArea) {
+            var clonedInput = document.getElementById('welcome-input-area');
+            if (!clonedInput) {
+                clonedInput = document.createElement('div');
+                clonedInput.id = 'welcome-input-area';
+                clonedInput.style.cssText = 'width:100%; max-width:500px; margin-top:20px;';
+                var form = document.getElementById('chat-form');
+                var audioRec = document.getElementById('audio-recorder');
+                if (form) clonedInput.appendChild(form);
+                if (audioRec) clonedInput.appendChild(audioRec);
+                welcome.appendChild(clonedInput);
+            }
+        }
+    } else {
+        if (inputArea) {
+            var form = document.getElementById('chat-form');
+            var audioRec = document.getElementById('audio-recorder');
+            if (form) inputArea.insertBefore(form, inputArea.firstChild);
+            if (audioRec) inputArea.appendChild(audioRec);
+            inputArea.style.display = 'block';
+            var welInput = document.getElementById('welcome-input-area');
+            if (welInput) welInput.remove();
+        }
+        if (messages) messages.style.justifyContent = 'flex-start';
+    }
+}
+
+var suggestionPool = [
+    { title: 'VO2 Max Plateau', desc: 'Understand why your aerobic capacity has stalled and how to break through.', q: 'My VO2 max has plateaued. What is causing it and how do I improve?' },
+    { title: 'Workload Ratio', desc: 'Acute:chronic workload ratio (ACWR) and injury-risk interpretation.', q: 'My acute:chronic workload ratio hit 1.6 this week. Should I be concerned?' },
+    { title: 'Race Tapering', desc: 'How to structure a taper and peak for one major competition.', q: 'How should I structure a 16-week periodization plan to peak for one race?' },
+    { title: 'Pre-Comp Fueling', desc: 'What and when to eat before competition for best performance.', q: 'What should I eat in the 3 hours before a competition?' },
+    { title: 'Weight Cut', desc: 'Safe rapid weight-cutting for weigh-in in combat and weight-class sports.', q: 'I need to cut 4 kg in 5 days for weigh-in. What is the safest approach?' },
+    { title: 'HRV Drop', desc: 'Interpreting heart-rate variability and deciding whether to train.', q: 'My HRV dropped 15% from baseline. Should I train today?' },
+    { title: 'Overtraining', desc: 'Markers of overtraining and how to structure a deload.', q: 'How do I know if I am overtrained, and what should I do about it?' },
+    { title: 'Hamstring Return', desc: 'Return-to-play timelines and criteria after a muscle strain.', q: 'I have a grade 1 hamstring strain. When can I return to full sprint training?' },
+    { title: 'Power-to-Weight', desc: 'Improving power-to-weight ratio without losing muscle.', q: 'How do I improve my power-to-weight ratio without losing muscle?' },
+    { title: 'Comp Anxiety', desc: 'Why you underperform in competition and how to fix it.', q: 'I perform well in training but underperform in competitions. Why?' },
+    { title: 'Heart-Rate Zones', desc: 'Zone distribution to improve your 5 km time.', q: 'What heart-rate zones should I train in to improve my 5 km time?' },
+    { title: 'Creatine', desc: 'Whether creatine helps sprinters and how to dose it.', q: 'Does creatine actually help sprint athletes, and how should I take it?' },
+    { title: 'Opponent Analysis', desc: 'How to break down an opponent before a match.', q: 'How should I analyze my opponent\'s movement patterns before a match?' },
+    { title: 'Wearable Data', desc: 'Reading GPS, RPE, and load trends from your wearable.', q: 'My GPS speed is unchanged but my RPE has risen for 3 weeks. What does it mean?' },
+    { title: 'Youth Specialization', desc: 'When a young athlete should specialize in one event.', q: 'I am a 17-year-old sprinter. Should I specialize fully in the 100m now?' },
+    { title: 'Masters Training', desc: 'Adjusting training for age-related changes after 30.', q: 'I am 32 and still competing. How do I adjust my training for age?' },
+];
+
+function renderSuggestions() {
+    var container = document.getElementById('suggestion-cards');
+    if (!container) return;
+    var shuffled = suggestionPool.slice().sort(function() { return 0.5 - Math.random(); });
+    var picked = shuffled.slice(0, 4);
+    container.innerHTML = '';
+    picked.forEach(function(s) {
+        var card = document.createElement('div');
+        card.className = 'chat-suggestion';
+        card.style.cssText = 'background:#1e1f20; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:14px; cursor:pointer; transition:all 0.2s ease;';
+        card.onclick = function() { sendSuggestion(s.q); };
+        card.innerHTML = '<div style="display:flex; justify-content:space-between; align-items:start; margin-bottom:8px;"><strong style="font-size:15px; color:#e3e3e3; line-height:1.3;">' + s.title + '</strong><i class="fa-solid fa-arrow-up-right-from-square" style="font-size:10px; color:#5f6368;"></i></div><p style="font-size:13px; color:#9aa0a6; line-height:1.4; margin:0;">' + s.desc + '</p>';
+        container.appendChild(card);
+    });
+}
+
+renderSuggestions();
+
+function sendSuggestion(text) {
+    var welcome = document.getElementById('chat-welcome');
+    if (welcome) welcome.style.display = 'none';
+    setChatWelcomeMode(false);
+    var input = document.getElementById('message-input');
+    input.value = text;
+    document.getElementById('chat-form').dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+}
+</script>
+
+<style>
+/* Chat Modal - centered, large */
+#chat-modal-box {
+    top: 50% !important;
+    left: 50% !important;
+    bottom: auto !important;
+    right: auto !important;
+    transform: translate(-50%, -50%) !important;
+    width: 85% !important;
+    height: 90% !important;
+    max-width: 1200px;
+    max-height: 95vh;
+}
+@media (max-width: 576px) {
+    #chat-modal-box {
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        border-radius: 0 !important;
+    }
+    #chat-backdrop { display: none !important; }
+}
+@media (min-width: 577px) and (max-width: 991px) {
+    #chat-modal-box {
+        width: 85% !important;
+        height: 90% !important;
+        max-width: none !important;
+    }
+}
+.chat-suggestion:hover {
+    border-color: #3B82F6 !important;
+    background: #2b2d30 !important;
+    box-shadow: 0 2px 8px rgba(59, 130, 246,0.15);
+}
+#chat-messages .message-wrapper.user {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#chat-messages .message-wrapper.user .message {
+    background: #3B82F6;
+    color: #fff;
+    border-radius: 20px 20px 4px 20px;
+    padding: 14px 18px;
+    max-width: 80%;
+    font-size: 15px;
+    line-height: 1.7;
+}
+#chat-messages .message-wrapper.system,
+#chat-messages .message-wrapper.assistant {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#chat-messages .message-wrapper.system .message,
+#chat-messages .message-wrapper.assistant .message {
+    background: #1e1f20;
+    color: #c4c7c5;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px 20px 20px 20px;
+    padding: 16px 20px;
+    max-width: 85%;
+    font-size: 15px;
+    line-height: 1.7;
+}
+#chat-messages .message-wrapper.system .message p { color: #c4c7c5; margin-bottom: 6px; }
+#chat-messages .message-wrapper.system .message p:last-child { margin-bottom: 0; }
+#chat-messages .message-wrapper.system .message strong { color: #e3e3e3; }
+#chat-messages .message-wrapper.system .message span { color: #3B82F6; }
+#chat-messages .message-wrapper.system .message ul,
+#chat-messages .message-wrapper.assistant .message ul,
+#chat-messages .message-wrapper.system .message ol,
+#chat-messages .message-wrapper.assistant .message ol { padding-left: 20px; margin: 8px 0; }
+#chat-messages .message-wrapper.system .message li,
+#chat-messages .message-wrapper.assistant .message li { margin-bottom: 4px; }
+#chat-messages .typing-indicator {
+    display: flex;
+    align-items: center;
+    background: #1e1f20;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 12px 16px;
+}
+#chat-messages .typing-dot {
+    width: 8px;
+    height: 8px;
+    background: #3B82F6;
+    border-radius: 50%;
+    margin-right: 4px;
+    animation: typing-bounce 1.4s infinite ease-in-out;
+}
+#chat-messages .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+#chat-messages .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+@keyframes typing-bounce {
+    0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+    40% { transform: scale(1); opacity: 1; }
+}
+.msg-footer button:hover { background: rgba(255,255,255,0.08) !important; color: #3B82F6 !important; }
+.msg-actions { display: flex; gap: 2px; margin-top: 6px; padding: 0 4px; }
+.msg-action-btn {
+    background: none; border: none; color: #5f6368; font-size: 16px;
+    cursor: pointer; padding: 4px 8px; border-radius: 6px; transition: all 0.2s;
+}
+.msg-action-btn:hover { background: rgba(255,255,255,0.08); color: #3B82F6; }
+.user-actions { opacity: 0; transition: opacity 0.2s; justify-content: flex-end; }
+.message-wrapper.user:hover .user-actions { opacity: 1; }
+.ai-actions { justify-content: flex-start; }
+#message-input { overflow-y: hidden; }
+#message-input::placeholder { color: #5f6368; }
+#chat-form button[type="button"] .fa-stop { font-size: 12px; }
+#audio-waveform { display: flex; align-items: center; justify-content: center; gap: 2px; height: 32px; }
+.wave-bar { width: 2px; background: #fff; border-radius: 1px; min-height: 2px; }
+.recording-pulse { width: 8px; height: 8px; background: #ef4444; border-radius: 50%; flex-shrink: 0; }
+.recording-pulse.active { animation: pulse-anim 1s infinite; }
+@keyframes pulse-anim {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+}
+#chat-fab:hover > div:first-child { transform: scale(1.1); }
+/* Dark scrollbar */
+#chat-messages::-webkit-scrollbar { width: 6px; }
+#chat-messages::-webkit-scrollbar-track { background: transparent; }
+#chat-messages::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 3px; }
+#chat-messages::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+</style>
+
+<!-- Chat JS -->
+<script src="/static/js/app.js"></script>
+
+</body>
+</html>
