@@ -67,7 +67,7 @@ app.include_router(websocket_router)
 @app.get("/", response_class=HTMLResponse)
 async def get_home(request: Request):
     """Serve the main HTML page"""
-    return templates.TemplateResponse("index.html", {"request": request})
+    return FileResponse("templates/index.html", media_type="text/html")
 
 # Health check endpoint
 @app.get("/health")
@@ -115,21 +115,21 @@ async def get_robots():
 @app.get("/privacy", response_class=HTMLResponse)
 async def get_privacy_policy(request: Request):
     """Serve the privacy policy page"""
-    return templates.TemplateResponse("privacy.html", {"request": request})
+    return FileResponse("templates/privacy.html", media_type="text/html")
 
 @app.get("/terms", response_class=HTMLResponse)
 async def get_terms_of_use(request: Request):
     """Serve the terms of use page"""
-    return templates.TemplateResponse("terms.html", {"request": request})
+    return FileResponse("templates/terms.html", media_type="text/html")
 
 @app.exception_handler(404)
 async def not_found_exception_handler(request: Request, exc):
     """
     Handle 404 errors by rendering a custom template
     """
-    return templates.TemplateResponse(
-        "404.html", 
-        {"request": request}, 
+    return FileResponse(
+        "templates/404.html",
+        media_type="text/html",
         status_code=404
     )
     
